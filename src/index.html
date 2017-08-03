@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Autocomplete Demo</title>
+  <link rel="stylesheet" href="https:////code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/header-auto-complete.min.js"></script>
+</head>
+<body>
+
+<div id="app" class="container">
+  <h1>Autocomplete</h1>
+  <div class="ui-widget">
+    <label for="mtg1">MainTags1: </label>
+    <input id="mtg1" v-model="mainTag1">
+    <label for="stg1">SubTags1: </label>
+    <input id="stg1" v-model="subTag1">
+  </div>
+  <div class="ui-widget">
+    <label for="mtg2">MainTags2: </label>
+    <input id="mtg2" v-model="mainTag2">
+    <label for="stg2">SubTags2: </label>
+    <input id="stg2" v-model="subTag2">
+  </div>
+
+
+</div>
+<script type="text/javascript">
+HeaderAutoComplete('#mtg1', '#stg1');
+HeaderAutoComplete('#mtg2', '#stg2');
+  var app = new Vue({
+    el: "#app",
+    data:{
+      mainTag1: "",
+      subTag1: "",
+      mainTag2: "",
+      subTag2: ""
+        }
+  });
+</script>
+
+</body>
+</html>
