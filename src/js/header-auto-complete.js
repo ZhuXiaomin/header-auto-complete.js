@@ -40,7 +40,7 @@ var HeaderAutoComplete = function(x, y) {
       'Via'
     ];
     // binding header key source
-    $(x).autocomplete({source: mainArr});
+    $(x).autocomplete({autoFocus: true, source: mainArr});
 
     var subArr = [
       [
@@ -243,6 +243,7 @@ var HeaderAutoComplete = function(x, y) {
 
     // binding header value source
     $(y).autocomplete({
+      autoFocus: true,
       source: function(request, response) {
         var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
         var mainTagVal = $(x).val();
